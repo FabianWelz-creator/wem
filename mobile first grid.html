@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+body {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    line-height: 3;
+}
+
+    .container{
+        display: grid;
+        max-width: 900px;
+        min-height: 100vh;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto 1fr auto auto;
+        grid-template-areas: "header"
+                       "sidebar-left"
+                       "main"
+                       "sidebar-right";
+    }
+    header { grid-area: header; background:red;}
+    main { grid-area: main; background:blue;}
+    .left-sidebar { grid-area: sidebar-left; background:green; }
+    .right-sidebar { grid-area: sidebar-right; background:deeppink;}
+
+
+
+@media (min-width: 1024px){
+.container {
+  max-width:100%;
+  width:100%;
+  height:100%;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas:
+    "head head head"
+    "panleft mainbody panright";
+}
+  header{
+background-color:red;
+grid-area: head;
+}
+.left-sidebar{
+grid-area: panleft;
+}
+.right-sidebar{
+grid-area: panright;
+}
+main {
+grid-area: mainbody;
+min-height: 80vh;
+}
+}
+
+}
+@media (min-width: 768px) and (max-width: 1024px){
+
+
+    .container{
+        max-width:100%;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto 1fr auto auto auto;
+        grid-template-areas: "header header"
+                       "sidebar-left main"
+                       "sidebar-right sidebar-right"
+                       "footer footer";
+    }
+    header { grid-area: header; }
+    main { grid-area: main; }
+    .left-sidebar { grid-area: sidebar-left; }
+    .right-sidebar { grid-area: sidebar-right; }
+
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <header>HEADER
+
+    </header>
+    <main>MAIN CONTENT</main>
+    <aside class="left-sidebar">LEFT SIDEBAR</aside>
+    <aside class="right-sidebar">RIGHT SIDEBAR</aside>
+</div>
+</body>
+</html>

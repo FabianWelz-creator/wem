@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    line-height: 3;
+}
+header {
+    background-color: red;
+    width:100%;
+}
+main {
+    background-color: blue;
+
+    order: 2;
+    min-height: 80vh;
+    width:60%;
+}
+
+.left-sidebar {
+    background-color: green;
+    order: 1;
+
+    width:20%;
+}
+.right-sidebar {
+    background-color: deeppink;
+    order:2;
+    width:20%;
+
+}
+.container {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+@media (min-width: 1024px){
+    .container{
+
+    }
+    .right-sidebar{
+        /*align-self:flex-end;*/
+        /*flex-wrap:wrap;*/
+
+        width:100%;
+        height:15vh;
+    }
+    main{
+    width:80%;
+    }
+}
+@media (max-width: 768px){
+    .container{
+        flex-direction:column;
+    }
+    main{
+    width:100%;
+    }
+    .right-sidebar{
+    width:100%;
+    }
+    .left-sidebar{
+    width:100%;
+    }
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <header>HEADER</header>
+    <main>MAIN CONTENT</main>
+    <aside class="left-sidebar">LEFT SIDEBAR</aside>
+    <aside class="right-sidebar">RIGHT SIDEBAR</aside>
+</div>
+</body>
+</html>

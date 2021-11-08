@@ -1,0 +1,55 @@
+<h1 id="list_name">Einkaufsliste</h1>
+
+
+<ul id="grocery_list">
+    <li>
+        <input type="text" id="grocery_list_input"/>
+        <button type="submit" id="add_to_list">Add to list</button>
+    </li>
+</ul>
+<script>
+let groceryList = document.querySelector('#grocery_list');
+const addToListButton = document.querySelector('#add_to_list');
+const groceryListInput = document.querySelector("#grocery_list_input");
+let listName = document.querySelector('#list_name');
+let listNameInput = document.querySelector('#list_name_input');
+const editListName = document.querySelector('#edit_list_name');
+
+var i=1;
+
+let addToList = () => {
+	if (groceryListInput.value !== '') {
+		let li = document.createElement('li');
+		li.textContent = groceryListInput.value;
+		li.setAttribute("id",i);
+		let button = document.createElement('Button');
+		button.textContent = "delete";
+        button.setAttribute("class","delete_element");
+		button.setAttribute("id",i);
+		i++;
+		button.onclick = e => {
+		    groceryList.removeChild(li);
+		    groceryList.removeChild(button);
+		}
+		li.append(button);
+		groceryList.appendChild(li);
+		groceryListInput.value = '';
+		groceryList.appendChild(button);
+	}
+}
+
+addToListButton.addEventListener('click', ()=>{
+	addToList();
+})
+
+groceryListInput.addEventListener('keypress', function (e) {
+    var key = e.which || e.keyCode;
+    if (key === 13) { // 13 is enter
+      	addToList();
+    }
+});
+
+
+
+
+</script>

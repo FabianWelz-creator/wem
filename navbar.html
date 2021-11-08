@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+h1 {
+text-align: center;
+font-family:Calibri;
+}
+p {
+text-align: center;
+font-family:Arial;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 5px;
+  border-color:black;
+  border-style: solid;
+  border-width:1px;
+}
+.navbar {
+  background-color: #363636;
+  height:50px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.linx {
+  color:#fff;
+  list-style-type: none;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.linx > li {
+  display: inline-block;
+  color:#fff;
+  line-height: 3;
+  text-align: center;
+}
+li a{
+  color:#fff;
+  margin-left:10px;
+  text-decoration: none;
+  font-family:arial;
+}
+button{
+    background-color:#f88e37;
+    color:white;
+    padding:5px;
+    border-radius: 5px;
+    border-color:#f88e37;
+    border-style: solid;
+    font-weight:bold;
+}
+.box{
+display: flex;
+}
+.leftdiv{
+ flex: 0 0 50%;
+}
+.rightdiv{
+ margin-top:5%;
+ font-size: 21px;
+}
+.rightdiv p{
+margin-bottom:50px;
+}
+.rightdiv button{
+    position: relative;
+    left: 25%;
+}
+.footer{
+            background-color: #011826;
+            color: white;
+            padding: 4rem 0 3rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2%;
+}
+button{
+padding: 10px 10%;
+}
+body{
+background-color:#ebeae6;
+}
+</style>
+</head>
+<body>
+<nav class="navbar " role="navigation">
+    <div>
+        <ul class="linx">
+            <li><a href="#">The book series</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">The Author</a></li>
+            <li><a href="#">Free resources</a></li>
+        </ul>
+    </div>
+</nav>
+<h1>You dont know JavaScript </h1>
+<div class="box">
+
+    <div class="leftdiv">
+    <img src="https://kaul.inf.h-brs.de/wem/assets/img/landing-img.png" alt="alternatetext">
+    </div>
+    <div class="rightdiv">
+        <p>Don't just drift through javascript</p>
+        <p>Understand how javascript works</p>
+        <p>Start your journey through the bumpy side of javascript</p>
+        <button type="button">ORDER YOUR COPY NOW</button>
+    </div>
+</div>
+<div class="footer">
+    <p>The first ebook in the book series is absolutely free.</p>
+    <button type="button">FIND OUT MORE ABOUT THIS OFFER</button>
+</div>
+</body>
+</html>
