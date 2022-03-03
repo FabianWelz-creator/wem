@@ -1,0 +1,141 @@
+<h1>Sitze im Bundestag</h1>
+<style>
+svg > rect{
+	stroke: rgb(50, 50, 250);
+	stroke-width: 10;
+animation-duration:1s;
+animation-iteration:1;
+animation-fill-mode:forwards;
+}
+
+svg > rect.SPD{
+stroke-dasharray: 0 5;
+animation-name: appearSPD;
+}
+svg > rect.CDU{
+stroke-dasharray: 0 10;
+animation-name: appearCDU;
+animation-delay: 1s;
+}
+svg > rect.Gruene{
+stroke-dasharray: 0 20;
+animation-name: appearGruene;
+animation-delay: 2s;
+}
+svg > rect.FDP{
+stroke-dasharray: 0 30;
+animation-name: appearFDP;
+animation-delay: 3s;
+}
+svg > rect.AFD{
+stroke-dasharray: 0 40;
+animation-name: appearAFD;
+animation-delay: 4s;
+}
+svg > rect.Linke{
+stroke-dasharray: 0 50;
+animation-name: appearLinke;
+animation-delay: 5s;
+}
+svg > rect.SSW{
+stroke-dasharray: 0 50;
+animation-name: appearSSW;
+animation-delay: 5s;
+}
+@keyframes appearSPD {
+	0% { stroke-dasharray: 0 5; }
+	50% { stroke-dasharray: 5 5; }
+	100% { stroke-dasharray: 5 5; }
+}
+
+@keyframes appearCDU {
+	0% { stroke-dasharray: 0 10; }
+	50% { stroke-dasharray: 10 10; }
+	100% { stroke-dasharray: 10 10; }
+}
+
+@keyframes appearGruene {
+	0% { stroke-dasharray: 0 30; }
+	50% { stroke-dasharray: 30 30; }
+	100% { stroke-dasharray: 30 30; }
+}
+@keyframes appearFDP {
+	0% { stroke-dasharray: 0 40; }
+	50% { stroke-dasharray: 40 40; }
+	100% { stroke-dasharray: 40 40; }
+}
+@keyframes appearAFD {
+	0% { stroke-dasharray: 0 50; }
+	50% { stroke-dasharray: 50 50; }
+	100% { stroke-dasharray: 50 50; }
+}
+@keyframes appearLinke {
+	0% { stroke-dasharray: 0 60; }
+	50% { stroke-dasharray: 60 60; }
+	100% { stroke-dasharray: 60 60; }
+}
+@keyframes appearSSW {
+	0% { stroke-dasharray: 0 70; }
+	50% { stroke-dasharray: 70 70; }
+	100% { stroke-dasharray: 70 70; }
+}
+
+</style>
+<svg width="400" height="500">
+    <g transform="translate(40,20)">
+        <g class="x axis" transform="translate(0,450)">
+            <g class="tick" transform="translate(25.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line>
+                <text dy=".71em" y="9" x="0" style="text-anchor: middle;">SPD</text>
+            </g>
+            <g class="tick" transform="translate(75.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line>
+                <text dy=".71em" y="9" x="0" style="text-anchor: middle;">CDU</text>
+            </g>
+            <g class="tick" transform="translate(125.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line>
+                <text dy=".71em" y="9" x="0" style="text-anchor: middle;">Gr&uuml;ne</text>
+            </g>
+            <g class="tick" transform="translate(175.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line>
+                <text dy=".71em" y="9" x="0" style="text-anchor: middle;">FDP</text>
+            </g>
+            <g class="tick" transform="translate(225.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line>
+                <text dy=".71em" y="9" x="0" style="text-anchor: middle;">AFD</text>
+            </g>
+            <g class="tick" transform="translate(275.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line>
+                <text dy=".71em" y="9" x="0" style="text-anchor: middle;">Linke</text>
+            </g>
+            <g class="tick" transform="translate(325.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line>
+                <text dy=".71em" y="9" x="0" style="text-anchor: middle;">SSW</text>
+            </g>
+
+            <path class="domain" d="M0,6V0H900V6"></path>
+        </g>
+        <g class="y axis">
+            <g class="tick" transform="translate(0,450)" style="opacity: 1;"><line x2="-6" y2="0"></line>
+                <text dy=".32em" x="-9" y="0" style="text-anchor: end;">0</text>
+            </g>
+            <g class="tick" transform="translate(0,400)" style="opacity: 1;"><line x2="-6" y2="0"></line>
+                <text dy=".32em" x="-9" y="0" style="text-anchor: end;">50</text>
+            </g>
+            <g class="tick" transform="translate(0,350)" style="opacity: 1;"><line x2="-6" y2="0"></line>
+                <text dy=".32em" x="-9" y="0" style="text-anchor: end;">100</text>
+            </g>
+            <g class="tick" transform="translate(0,300)" style="opacity: 1;"><line x2="-6" y2="0"></line>
+                <text dy=".32em" x="-9" y="0" style="text-anchor: end;">150</text>
+            </g>
+            <g class="tick" transform="translate(0,250)" style="opacity: 1;"><line x2="-6" y2="0"></line>
+                <text dy=".32em" x="-9" y="0" style="text-anchor: end;">200</text>
+            </g>
+            <g class="tick" transform="translate(0,200)" style="opacity: 1;"><line x2="-6" y2="0"></line>
+                <text dy=".32em" x="-9" y="0" style="text-anchor: end;">250</text>
+            </g>
+            <path class="domain" d="M-6,0H0V450H-6"></path>
+            <text transform="rotate(-90)" y="6" dy=".71em" style="text-anchor: end;">Sitze</text>
+        </g>
+        <rect class="SPD" x="10" width="40" y="244" height="206"></rect>
+        <rect class="CDU" x="60" width="40" y="253" height="197"></rect>
+        <rect class="Gruene" x="110" width="40" y="332" height="118"></rect>
+        <rect class="FDP" x="160" width="40" y="358" height="92"></rect>
+        <rect class="AFD" x="210" width="40" y="367" height="83"></rect>
+        <rect class="Linke" x="260" width="40" y="411" height="39"></rect>
+        <rect class="SSW" x="310" width="40" y="449" height="1"></rect>
+    </g>
+</svg>
